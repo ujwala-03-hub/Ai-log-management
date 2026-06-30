@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Log Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            width: 180px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .card h2 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            background: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>AI Log Monitoring Dashboard</h1>
+
+    <h2>Dashboard Summary</h2>
+
+    <div class="summary">
+
+        <div class="card">
+            <h3>Total Logs</h3>
+            <h2>{{ total_logs }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Anomalies</h3>
+            <h2>{{ anomaly_count }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Normal Logs</h3>
+            <h2>{{ normal_count }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Anomaly Rate</h3>
+            <h2>{{ anomaly_percentage }}%</h2>
+        </div>
+
+    </div>
+
+    {{ table|safe }}
+
+</body>
+</html>
