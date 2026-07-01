@@ -1,5 +1,5 @@
 import pandas as pd
 
-def load_logs():
-    df = pd.read_csv("data/sample/demo_logs.csv")
-    return df
+def load_logs(file_path="data/sample/demo_logs.csv"):
+    df = pd.read_csv(file_path)
+    return df 
