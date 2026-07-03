@@ -1,2 +1,2 @@
-Total Logs: 50
-Anomalies: 13
+Total Logs: 253
+Anomalies: 64
